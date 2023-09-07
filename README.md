@@ -1,4 +1,42 @@
-# cvds-lab3
+# LABORATORIO 3 - TDD
+## INTEGRANTES
+- Andrea Valentina Torres Tobar
+- Carolina Medina Acero 
+
+
+
+## CREAR, COMPILAR Y EJECUTAR UN PROYECTO CON MAVEN
+- Ejecute los comandos necesarios de Maven, para compilar el proyecto y verificar que el proyecto se creó correctamente y los cambios realizados al archivo pom no generan inconvenientes.
+
+
+![image](img/compilar.png)
+![image](img/ejecutartdd.png)
+
+
+## EJERCICIO “REGISTRADURÍA
+
+### EJECUTAR LAS PRUEBAS
+Piense en los casos de equivalencia que se pueden generar del ejercicio para la registraduría dadas las condiciones. Deben ser al menos 5.
+
+Nosotras proponemos los siguientes casos: 
+1. validateIsDead.
+2. validateIsUnderage
+3. validateIsInvalidAge
+4. validateisValid
+5. validateisDuplicated
+
+![image](img/pruebasfallando.png)
+### FINALIZAR EJERCICIO
+
+Complete la implementación del método registerVoter en la clase Registry.java para retornar el resultado esperado según la entrada.
+
+![image](img/ejecutarPruebatdd1.png)
+![image](img/ejecutarPruebatdd2.png)
+
+
+## EJERCICIO "DESCUENTO DE TARIFAS"
+### REALIZAR DISEÑO DE PRUEBAS
+![image](img/enunciado.png)
 
 AeroDescuentos
 
@@ -9,6 +47,11 @@ AeroDescuentos
         Los días de antelación son negativos
         La edad supera los 200 años
         La edad es negativa o igual a 0
+
+2. 
+
+![image](img/tabla.png)
+
 
 3.
 
@@ -91,6 +134,21 @@ AeroDescuentos
 
         Limite superior: calculoTarifa(0, 21, 20) = excepción
         limite inferior: calculoTarifa(-10000000000, 21, 20) = excepción
+
+### IMPLEMENTACIÓN DE LAS PRUEBAS
+Descargue el archivo aerodescuentos.jar y adicione esta nueva dependencia en el archivo pom.xml de su proyecto.
+
+Para adicionar una librería personalizada al repositorio local de maven puede ejecutar el siguiente comando.
+```sh
+$ mvn install:install-file -Dfile=aerodescuentos-1.0.0.jar -DgroupId=edu.eci.cvds -DartifactId=aerodescuentos -Dversion=1.0.0 -Dpackaging=jar
+```
+![image](img/adicionarLibreria.png)
+
+Ejecute el comando de Maven para las fases de compilación y pruebas. Verifique el resultado exitoso de todas las pruebas y el reporte generado.
+![image](img/pruebasAerodescuentos.png)
+
+
+
 
 
 
